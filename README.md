@@ -18,4 +18,4 @@ Swarm initiation and boostrapping needs to be taken care of by you.
 
 ### Prerequisites
 
-Has been tested with `virtualbox 5.0.40_Ubuntu r115130` on `Ubuntu 16.04.3 LTS`
+Has been tested with `vagrant 2.0.0`, `virtualbox 5.0.40_Ubuntu r115130` on `Ubuntu 16.04.3 LTS`
