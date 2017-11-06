@@ -12,7 +12,6 @@ config.vm.define "master#{i}", primary: true do |master|
   master.vm.box = "ubuntu/xenial64"
   master.vm.synced_folder ".", "/vagrant", disabled: true
   master.vm.hostname = "master#{i}"
-  # master.vm.synced_folder "../pkara-enorasys-ls/enorasys-ls/", "/workspace"
   master.vm.network :private_network, ip: "192.168.1.1#{i}"
   master.vm.provider "virtualbox" do |vb|
     vb.memory = "2048"
