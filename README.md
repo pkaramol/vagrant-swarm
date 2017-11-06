@@ -11,7 +11,8 @@ cd vagrant-swarm
 vagrant up
 ```
 
-This will init a private network consisting of 2 master swam nodes on IPs 192.168.1.11, 192.168.1.12 and two slave nodes on IPs 192.168.1.21, 192.168.1.22.
+This will init a private network consisting of 2 master swam nodes on IPs `192.168.1.11`, `192.168.1.12` and two slave nodes on IPs `192.168.1.21`, `192.168.1.22`.
+
 Master / slave distinction is only semantic (hostnames) and resource (RAM) based for the time being.
 Swarm initiation and boostrapping needs to be taken care of by you.
 
