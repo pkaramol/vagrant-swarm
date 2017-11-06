@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
 config.vm.define "master#{i}", primary: true do |master|
   master.vm.box = "ubuntu/xenial64"
   master.vm.synced_folder ".", "/vagrant", disabled: true
-  master.vm.hostname = "swarm.master#{i}.node.test.com"
+  master.vm.hostname = "master#{i}"
   # master.vm.synced_folder "../pkara-enorasys-ls/enorasys-ls/", "/workspace"
   master.vm.network :private_network, ip: "192.168.1.1#{i}"
   master.vm.provider "virtualbox" do |vb|
@@ -28,7 +28,7 @@ end
     config.vm.define "slave#{i}" do |slave|
       slave.vm.box = "ubuntu/xenial64"
       slave.vm.synced_folder ".", "/vagrant", disabled: true
-      slave.vm.hostname = "swarm.slave#{i}.node.test.com"
+      slave.vm.hostname = "slave#{i}"
       slave.vm.network :private_network, ip: "192.168.1.2#{i}"
       # esnode.vm.network "forwarded_port", guest: 80, host: "808#{i}"
       slave.vm.provider "virtualbox" do |vb|
